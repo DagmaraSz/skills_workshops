@@ -13,9 +13,20 @@ class Converter
     elsif type == :json
       { response: @string }.to_json
     elsif type == :xml
-      "<response>#{ @string }</response>"  
+      "<response>#{ @string }</response>"
     else
       raise "Unrecognised type"
-    end      
+    end
+  end
+
+  def shouty_convert(type)
+    @string = @string.upcase
+    convert(type)
+  end
+
+  def convert_location
+    string = ''
+    @string.length.times {string += "*"}
+    string
   end
 end

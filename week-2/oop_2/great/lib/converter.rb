@@ -9,9 +9,10 @@ class Converter
     @string = string
   end
 
-  def convert(type)
+  def convert(type, style=:downcase)
     raise "Unrecognised type" unless known_parser?(type)
-    parser_of_type(type).convert  
+    @string.upcase! if style == :upcase
+    parser_of_type(type).convert
   end
 
   private

@@ -3,7 +3,7 @@ require 'calculator'
 describe 'A calculator' do
  describe '#add' do
    it 'adds two numbers' do
-     engine = CalculatorEngine.new
+     engine = Calculator.new
      expect(engine.add(2, 3)).to eq 5
      expect(engine.add(6, 4)).to eq 10
      expect(engine.add(0, 0)).to eq 0
@@ -15,7 +15,7 @@ describe 'A calculator' do
 
  describe '#subtract' do
    it 'subtracts two numbers' do
-     engine = CalculatorEngine.new
+     engine = Calculator.new
      expect(engine.subtract(3, 2)).to eq 1
      expect(engine.subtract(6, 4)).to eq 2
      expect(engine.subtract(0, 0)).to eq 0

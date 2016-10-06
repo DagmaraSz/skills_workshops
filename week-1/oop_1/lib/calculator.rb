@@ -1,4 +1,5 @@
-class CalculatorEngine
+#The CalculatorEngine understands mathematical operations
+class Calculator
   def add(number_1, number_2)
     number_1 + number_2
   end
@@ -8,11 +9,9 @@ class CalculatorEngine
   end
 end
 
+#The Printer understands how to display the output
 class Printer
   def print_answer(answer)
     "The Answer is: #{ answer }"
   end
 end
-
-#puts print_answer(add(2, 3))
-#puts print_answer(subtract(3, 2))

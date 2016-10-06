@@ -13,7 +13,7 @@ describe Appointment do
   it { is_expected.to respond_to :time }
 
   describe '#pretty_location' do
-    it 'pretty-prints the location' do
+    it 'pretty-prints the location', focus: true do
       expect(appointment.pretty_location).to eq "50 Commercial St, London E1 6LT, UK"
     end
   end
